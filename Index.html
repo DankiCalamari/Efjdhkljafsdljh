@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII Game</title>
+    <style>
+        /* Style the game container */
+        #game-container {
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre;
+            width: 100%;
+            height: 400px;
+            background-color: black;
+            color: white;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <script>
+        // Get the game container element
+        const gameContainer = document.getElementById('game-container');
+
+        // Initialize the game
+        function initGame() {
+            // Clear the game container
+            gameContainer.innerHTML = '';
+
+            // Render the initial game state
+            gameContainer.innerText = getInitialState();
+
+            // Focus on the game container to capture key presses
+            gameContainer.focus();
+
+            // Listen for key presses
+            gameContainer.addEventListener('keydown', handleKeyPress);
+        }
+
+        // Handle key presses
+        function handleKeyPress(event) {
+            // Get the key code
+            const keyCode = event.keyCode;
+
+            // Process the key press
+            switch (keyCode) {
+                case 37: // Left arrow
+                    // Perform the corresponding action for the game
+                    break;
+                case 38: // Up arrow
+                    // Perform the corresponding action for the game
+                    break;
+                case 39: // Right arrow
+                    // Perform the corresponding action for the game
+                    break;
+                case 40: // Down arrow
+                    // Perform the corresponding action for the game
+                    break;
+                default:
+                    // Ignore other keys
+                    return;
+            }
+
+            // Prevent the default behavior of the arrow keys (scrolling)
+            event.preventDefault();
+        }
+
+        // Get the initial game state as an ASCII string
+        function getInitialState() {
+            return 'Welcome to ASCII Game!\n\nPress arrow keys to play.\n';
+        }
+
+        // Start the game
+        initGame();
+    </script>
+</body>
+</html>
